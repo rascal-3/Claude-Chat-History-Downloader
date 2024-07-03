@@ -106,7 +106,7 @@ Claude-ChatHistory-Downloader.jsは、Claudeのチャット履歴をMarkdown形�
             markdown += messageType + parseElementToMarkdown(element) + '\n\n';
         });
 
-        markdown = markdown.replace(/(^|\s)Copy```/g, '```');
+        markdown = markdown.replace(/.*Copy```/g, '```');
         downloadMarkdownFile('chat_log.md', markdown);
     })();
     ```
