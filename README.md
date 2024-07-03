@@ -120,7 +120,7 @@ https://github.com/rascal-3/Claude-Chat-History-Downloader/blob/main/README(%E6%
         markdown += messageType + parseElementToMarkdown(element) + '\n\n';
     });
 
-    markdown = markdown.replace(/\S+Copy```/g, '```');
+    markdown = markdown.replace(/(\S+)?Copy```/g, '```');
     downloadMarkdownFile('chat_log.md', markdown);
 })();
 ```
