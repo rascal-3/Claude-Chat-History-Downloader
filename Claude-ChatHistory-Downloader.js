@@ -96,6 +96,6 @@
         markdown += messageType + parseElementToMarkdown(element) + '\n\n';
     });
 
-    markdown = markdown.replace(/(\S+)?Copy```/g, '```');
+    markdown = markdown.replace(/(^|\s)Copy```/g, '```');
     downloadMarkdownFile('chat_log.md', markdown);
 })();
